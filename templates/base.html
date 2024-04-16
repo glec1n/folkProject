@@ -1,25 +1,22 @@
-{% extends 'base.html' %}
-
 {% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/style.css' %}">
+    <title>Самоучитель по чатхану</title>
 </head>
 
 <body>
-
+    {% include 'navbar.html' %}
+    
     {% block content %}
-
-        <div>
-            <h1>Home page</h1>
-            <hr>
-            <p>Some text</p>
-        </div>
 
     {% endblock content %}
 
+    {% include 'footer.html' %}
 </body>
 
 </html>
