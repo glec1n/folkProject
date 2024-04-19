@@ -11,10 +11,137 @@
     {% block content %}
 
         <div class="home">
-            <p class="text">Home page</p>
+            <div class="title-container">
+                <h1 class="title">Онлайн-самоучитель игре на чатхане</h1>
+            </div>
+            <div class="sub-title-container">
+                <p class="sub-title">С помощью данного самоучителя Вы получите возможность изучить основы игры на этом инструменте, изучить технику исполнения, освоить различные мелодии и композиции хакасской музыкальной культуры.</p>
+            </div>
         </div>
 
-    {% endblock content %}
+        <!-- <div class="home-cards"> -->
+            <div class="home-category-container">
+                <div>
+                    <p class="category">Теоритическая часть</p>
+                    <p class="category-warning">Теоритические основы игры на чатхане</p>
+                </div>
+            </div>
 
+            <div class="home-cards-container">
+                {% for lesson in lessons %}
+                    {% if lesson.category == 'Теоритическая часть' %}
+                        <a href="{% url 'displayLesson' lesson.id %}"><div class="card-container">
+                            <div class="card-content">
+                                <img src="static\images\hq720.jpg" alt="">
+                                <hr class="card-hr">
+                                <div class="card-title-container">
+                                    <p class="card-title">{{lesson.title}}</p>
+                                </div>
+                            </div>
+                        </div></a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="home-category-container">
+                <div>
+                    <p class="category">Практическая часть</p>
+                    <p class="category-warning">Для того чтобы приступить к практике необходимо изучить теорию.</p>
+                </div>
+            </div>
+
+            <div class="home-cards-container">
+                {% for lesson in lessons %}
+                    {% if lesson.category == 'Практическая часть' %}
+                        <a href="{% url 'displayLesson' lesson.id %}"><div class="card-container">
+                            <div class="card-content">
+                                <img src="static\images\hq720.jpg" alt="">
+                                <hr class="card-hr">
+                                <div class="card-title-container">
+                                    <p class="card-title">{{lesson.title}}</p>
+                                </div>
+                            </div>
+                        </div></a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <hr class="category-hr">
+
+            <div class="home-category-container">
+                <div>
+                    <p class="category">Видеоуроки</p>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <button id="prev-slide" class="slide-button material-symbols-rounded"><i class='bx bx-chevron-left'></i></button>
+                    <div class="video-list">
+                        <iframe width="400" height="300"
+                            src="https://www.youtube.com/embed/AbjftoDGBf0">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="https://www.youtube.com/embed/KDvmHt8bBUQ">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/c9FG5c8xmPQ">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/g8_mWFBkDkM">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/Ap4Ng8XxUeY">
+                        </iframe>
+                    </div>
+                    <button id="next-slide" class="slide-button material-symbols-rounded"><i class='bx bx-chevron-right' ></i></button>
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="category-hr">
+
+            <!-- <div class="home-category-container">
+                <p class="category">Полезно</p>
+            </div>
+
+            <div class="home-cards-container">
+                {% for useful in usefuls %}
+                    <div class="card-container">
+                        <div class="card-content">
+                            <p class="card-lesson">Совет {{useful.id}}.</p>
+                            <hr class="card-hr">
+                            <div class="card-title-container">
+                                <p class="card-title">{{useful.title}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="home-category-container">
+                <p class="category">Разборы</p>
+            </div>
+
+            <div class="home-cards-container-parsing">
+                {% for parsing in parsings %}
+                    <div class="card-container">
+                        <div class="card-content">
+                            <p class="card-lesson">Разбор {{parsing.id}}.</p>
+                            <hr class="card-hr">
+                            <div class="card-title-container">
+                                <p class="card-title">{{parsing.title}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div> -->
+        <!-- </div> -->
+
+    {% endblock content %}
 
 </html>

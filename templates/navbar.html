@@ -11,7 +11,7 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="static\images\Logotip_primer.jpg" alt="logo">
+                    <a href="{% url 'home' %}"><img src="..\static\images\Logotip_primer.jpg" alt="logo"></a>
                 </span>
 
                 <div class="text header-text">
@@ -25,66 +25,14 @@
         <div class="menu-bar">
             <div class="menu">
                 <ul class="menu-links">
-                    <li class="nav-link">
-                        <a class="link" href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 1. Строение чатхана</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 2. Нотный стан</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 3. Звуки</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 4. Такт и размер</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 5. Струны</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 6. Мелодии</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 7 Мелодии</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 8 Мелодии</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 9 Прием игры</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="">
-                            <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">УРОК 10. Игра на чатхане как умение делиться опытом</span>
-                        </a>
-                    </li>
+                    {% for lesson in lessons %}
+                        <li class="nav-link">
+                            <a class="link" href="{% url 'displayLesson' lesson.id %}">
+                                <i class='bx bx-notepad icon'></i>
+                                    <span class="text nav-text">УРОК {{lesson.id}}. {{lesson.title}}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
 
