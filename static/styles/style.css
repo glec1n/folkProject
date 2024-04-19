@@ -5,10 +5,15 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(200, 200, 150);
-    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 300px;
+    min-height: 100vh;
+    width: calc(100% - 300px);
+    background: #f7f4f3;
 }
 
 :root{
@@ -18,23 +23,53 @@ body {
     --tran-05: all 0.5s ease;
 }
 
-.sidebar.open{
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    background: url('https://ch-muzei.rh.muzkult.ru/media/2021/07/10/1300791938/DSC_0264_1.jpg') center no-repeat fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: white;
+    height: 400px;
+}
+
+.home .title{
+    text-align: left;
+    margin: 0 0 0 50px;
+    font-size: 50px;
+}
+
+.home .sub-title{
+    margin: 0 35px 0 35px;
+    font-size: 20px;
+    text-align: justify;
+    font-style: italic;
+}
+
+.home .sub-title-container{
+    width: 1600px;
+}
+
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 300px;
     padding: 15px;
-    background-color: rgb(180, 120, 50);
+    background-color: rgb(247, 210, 117);
     transition: var(--tran-05);
 }
 
-.sidebar.open .text{
+.sidebar .text{
     transition: var(--tran-05);
     opacity: 1;
 }
 
-.sidebar.open .image-text img{
+.sidebar .image-text img{
     display: flex;
     margin: 0 auto 10px;
     width: 100px;
@@ -42,49 +77,34 @@ body {
     transition: var(--tran-05);
 }
 
-.sidebar.open header{
+.sidebar header{
     position: relative;
 }
 
-.sidebar.open header .header-text .title{
+.sidebar header .header-text .title{
     display: flex;
     justify-content: center;
     font-size: 20px;
     font-weight: 400;
+    color: #404040;
 }
 
-.sidebar.open header .header-text .sub-title{
+.sidebar header .header-text .sub-title{
     display: flex;
     justify-content: center;
     font-size: 24px;
     font-weight: 400;
+    color: #404040;
 }
 
-.sidebar.open header .header-text hr{
+.sidebar header .header-text hr{
     margin: auto;
-    max-width: 60%;
-    border: 1px solid black;
+    max-width: 100%;
+    border: 1px dashed #404040;
+    margin: 8px 0 0 0;
 }
 
-.sidebar.open header .toggle{
-    position: absolute;
-    top: 30%;
-    right: -35px;
-    height: 50px;
-    width: 50px;
-    transform: translateY(-50%);
-    background: rgb(150, 90, 20);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: white;
-    font-size: 34px;
-    transition: var(--tran-05);
-    cursor: pointer;
-}
-
-.sidebar.open li{
+.sidebar li{
     height: 50px;
     margin: 10px 0 0 0;
     list-style: none;
@@ -92,7 +112,7 @@ body {
     align-items: center;
 }
 
-.sidebar.open li .icon{
+.sidebar li .icon{
     min-width: 40px;
     font-size: 20px;
     display: flex;
@@ -100,69 +120,248 @@ body {
     align-items: center;
 }
 
-.sidebar.open li a{
+.sidebar li a{
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: #404040;
     border-radius: 10px;
-    transition: var(--tran-03);
+    transition: var(--tran-02);
 }
 
-.sidebar.open li a:hover{
-    background: rgb(165, 105, 35);
+.sidebar li a:hover{
+    background: rgb(207, 170, 70);
 }
 
-.sidebar.open li a:hover .icon,
-.sidebar.open li a:hover .text{
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
     color: white;
 }
 
-.sidebar.open .bottom-content{
+.sidebar .bottom-link{
     height: 100%;
     height: 130px;
     display: flex;
     align-items: flex-end;
 }
 
-.sidebar .bottom-content .icon{
+.sidebar .bottom-link .icon{
     font-size: 30px;
 }
 
-.sidebar .bottom-content .text{
+.sidebar .bottom-link .text{
     font-size: 24px;
+    color: #313130;
 }
 
-.sidebar .bottom-content li{
+.sidebar .bottom-link li{
     width: 100%;
 }
 
-.sidebar{
-    width: 88px;
-}
-
-.sidebar .text{
-    opacity: 0;
-}
-
-.sidebar .image-text img{
-    width: 50px;
-}
-
-.sidebar header .toggle{
-    top: 80%;
-}
-
-.sidebar header .toggle{
-    transform: translateY(-50%) rotate(-180deg);
-}
-
-.home{
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    left: 300px;
-    height: 100vh;
-    width: calc(100% - 300px);
-    background: red;
+    background: #404040;
+    margin-top: auto;
+    height: 80px;
+    width: 100%;
+}
+
+.footer .footer-text{
+    display: flex;
+    font-size: 16px;
+    color: white;
+}
+
+.home-cards-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    height: 300px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.card-container img{
+    height: 130px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-container:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.home-category-container{
+    display: flex;
+    margin: 30px auto 0;
+    width: 1160px;
+}
+
+.category{
+    font-size: 24px;
+}
+
+.card-container .card-lesson{
+    margin: 2px 0 0 18px;
+    font-size: 18px;
+}
+
+.card-container .card-hr{
+    display: flex;
+    margin: 5px auto;
+    max-width: 80%;
+    border: 1px dashed #313130;
+}
+
+.card-container .card-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 60px;
+    width: 180px;
+}
+
+.card-container .card-title-container .card-title{
+    display: flex;
+    text-align: center;
+}
+
+.category-hr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    min-width: 70%;
+    border: 1px dashed #313130;
+}
+
+/* .home-cards-container-useful{
+    display: flex;
+    justify-content: center;
+    width: 1165px;
+    margin: 0 0 10px 0;
+} */
+
+.home-cards-container-parsing{
+    display: flex;
+    justify-content: center;
+}
+
+.home-cards-container-parsing .card-container{
+    display: flex;
+    height: 200px;
+}
+
+.home-cards-container-parsing .card-container .card-title-container{
+    display: flex;
+    height: 150px;
+}
+
+.slider-container{
+    margin: auto;
+    width: 70%;
+}
+
+.slider-wrapper{
+    position: relative;
+}
+
+.slider-wrapper .video-list{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 15px 0 15px 0;
+}
+
+.slider-container .slider-scrollbar{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+}
+
+.slider-container .scrollbar-track{
+    position: relative;
+    height: 8px;
+    width: 100%;
+    background: grey;
+    border-radius: 4px;
+}
+
+.slider-container:hover .scrollbar-track{
+    height: 10px;
+}
+
+.slider-container .scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: rgb(247, 210, 117);
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.slider-container .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 10px;
+}
+
+.slider-container .scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.home-category-container .category-warning{
+    opacity: 0.5;
+}
+
+.slider-wrapper .slide-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    color: white;
+    background: #404040;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.slider-wrapper .slide-button:hover{
+    background: #313130;
+}
+
+.slider-wrapper .slide-button#prev-slide{
+    display: none;
+    left: -25px;
+}
+
+.slider-wrapper .slide-button#next-slide{
+    right: -25px;
 }
