@@ -12,8 +12,13 @@
 <body>
     {% block content %}
 
-    <h1>{{lesson.title}}</h1>
-    {{lesson.text | safe }}
+    <div class="lesson-container">
+        <div class="lesson-title-container">
+            <h1 class="lesson-title">Урок {{lesson.id}}. {{lesson.title}}</h1>
+            <span>{{lesson.category}}</span>
+        </div>
+        <span class="lesson-content">{{lesson.text | safe }}</span>
+    </div>
 
     {% endblock content %}
 </body>

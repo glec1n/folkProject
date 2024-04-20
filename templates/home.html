@@ -66,9 +66,21 @@
                 {% endfor %}
             </div>
 
+            <div class="home-practice-container">
+                {% for practice in practices %}
+                    <a href="{% url 'displayPractice' practice.id %}"><div class="practice-container">
+                        <div class="practice-content">
+                            <div class="practice-title-container">
+                                <p class="practice-title">{{practice.title}}</p>
+                            </div>
+                        </div>
+                    </div></a>
+                {% endfor %}
+            </div>
+
             <hr class="category-hr">
 
-            <div class="home-category-container">
+            <div class="home-category-container-videos">
                 <div>
                     <p class="category">Видеоуроки</p>
                 </div>
@@ -92,6 +104,21 @@
                         </iframe>
                         <iframe width="400" height="300"
                             src="http://www.youtube.com/embed/Ap4Ng8XxUeY">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/rMzoQ2eWGwU">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/4qAbk17dsvg">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/R4Q7ozSrssE">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/VVkkRW8AWp8">
+                        </iframe>
+                        <iframe width="400" height="300"
+                            src="http://www.youtube.com/embed/dlvWUQ_Vi04">
                         </iframe>
                     </div>
                     <button id="next-slide" class="slide-button material-symbols-rounded"><i class='bx bx-chevron-right' ></i></button>
