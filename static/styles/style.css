@@ -141,10 +141,19 @@ body{
 }
 
 .sidebar .bottom-link{
-    height: 100%;
-    height: 130px;
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
+}
+
+.sidebar .bottom-link p{
+    display: flex;
+    font-size: 18px;
+    color: #404040;
+}
+
+.sidebar .bottom-link .username{
+    color: black;
 }
 
 .sidebar .bottom-link .icon{
@@ -426,4 +435,179 @@ body{
     display: flex;
     margin: auto;
     width: 1160px;
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.login-form-box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 210, 117);
+    border-radius: 15px;
+}
+
+.login-form form{
+    width: 400px;
+    padding: 25px 25px;
+}
+
+.login-form header{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #404040;
+    padding: 0 0 15px 0;
+    border-bottom: 2px dashed #404040;
+}
+
+.login-form .form-input label{
+    display: flex;
+    font-size: 18px;
+    color: #404040;
+    margin: 0 0 5px 8px;
+}
+
+.login-form .form-input{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 0;
+}
+
+.login-form .form-input input{
+    height: 28px;
+}
+
+.login-form .form-input input:hover{
+    border-radius: 2px;
+    border: 2px solid #404040;
+}
+
+.login-form .form-submit{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .form-submit input{
+    margin: 20px 0 0 0;
+    height: 30px;
+    cursor: pointer;
+}
+
+.login-form .auth{
+    margin: 10px 0 0 10px;
+    color: #404040;
+}
+
+.login-form .auth a{
+    text-decoration: none;
+    color: #404040;
+    cursor: pointer;
+    border-bottom: 1px solid #404040;
+}
+
+.login-form .auth a:hover{
+    color: white;
+    border-color: white;
+}
+
+.login-form .form-message{
+    font-size: 18px;
+    color: rgb(255,51,51);
+    margin: 0 0 0 10px;
+}
+
+.register-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.register-form-box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 210, 117);
+    border-radius: 15px;
+}
+
+.register-form form{
+    width: 400px;
+    padding: 25px 25px;
+}
+
+.register-form header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #404040;
+    padding: 0 0 15px 0;
+    border-bottom: 2px dashed #404040;
+}
+
+.register-form .form-input label{
+    display: flex;
+    font-size: 18px;
+    color: #404040;
+    margin: 0 0 5px 8px;
+}
+
+.register-form .form-input{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 0;
+}
+
+.register-form .form-input input{
+    height: 28px;
+}
+
+.register-form .form-input input:hover{
+    border-radius: 2px;
+    border: 2px solid #404040;
+}
+
+.register-form .form-submit{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form .form-submit input{
+    margin: 20px 0 0 0;
+    height: 30px;
+    cursor: pointer;
+}
+
+.register-form .login{
+    margin: 10px 0 0 10px;
+    color: #404040;
+}
+
+.register-form .login a{
+    text-decoration: none;
+    color: #404040;
+    cursor: pointer;
+    border-bottom: 1px solid #404040;
+}
+
+.register-form .login a:hover{
+    color: white;
+    border-color: white;
+}
+
+.register-form .form-message{
+    font-size: 18px;
+    color: rgb(255,51,51);
+    margin: 0 0 0 10px;
+}
+
+.lesson-comment{
+    border: 1px dashed #404040;
 }

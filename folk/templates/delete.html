@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+
+    <p>Вы уверены что хотите удалить Ваш комментарий?</p>
+
+    <a href="{{request.META.HTTP_REFERER}}">Назад</a>
+    <input type="submit" value="Подтвердить">
+</form>
+
+{% endblock content %}

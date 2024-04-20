@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="login-form">
+    <div class="login-form-box">
+        <form action="" method="POST">
+            {% csrf_token %}
+    
+            <header>Вход</header>
+            
+            <div class="form-input">
+                <label for="username">Логин</label>
+                <input type="text" name="username" placeholder="Логин">
+            </div>
+            <div class="form-input">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" placeholder="Пароль">
+            </div>
+    
+            <div class="form-submit">
+                <input type="submit" value="Войти">
+            </div>
+
+            <div class="form-message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="auth">
+                <span>Нет аккаунта? <a href="{% url 'register' %}"> Регистрация </a></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

@@ -6,6 +6,7 @@ from folk.models import (
     Parsing,
     Image,
     Practice,
+    Comment,
 )
 
 admin.site.register(Lesson)
@@ -13,3 +14,4 @@ admin.site.register(Useful)
 admin.site.register(Parsing)
 admin.site.register(Image)
 admin.site.register(Practice)
+admin.site.register(Comment)

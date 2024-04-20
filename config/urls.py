@@ -8,6 +8,13 @@ from folk.views import (
     displayHome,
     displayLesson,
     displayPractice,
+    deleteComment,
+)
+
+from users.views import (
+    registerPage,
+    loginPage,
+    logoutUser
 )
 
 urlpatterns = [
@@ -15,6 +22,10 @@ urlpatterns = [
     path('', displayHome, name='home'),
     path('lesson/<int:pk>', displayLesson, name='displayLesson'),
     path('practice/<int:pk>', displayPractice, name='displayPractice'),
+    path('register', registerPage, name='register'),
+    path('login', loginPage, name='login'),
+    path('logout', logoutUser, name='logout'),
+    path('delete-comment/<int:pk>', deleteComment, name='delete-comment' )
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
