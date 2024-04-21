@@ -611,3 +611,25 @@ body{
 .lesson-comment{
     border: 1px dashed #404040;
 }
+
+.container-comment div {
+    border: 1px solid #000;
+    border-top-right-radius: 15px 15px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 2px 3px 3px #404040;
+    background-color: #fff;
+}
+
+.container-comment h1 {
+    margin: 20px;
+}
+
+.leave-comment {
+    margin: 20px 0 0 20px;
+}
+
+.leave-comment input {
+    width: 80%;
+    padding: 20px;
+}
