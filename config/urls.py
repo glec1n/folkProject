@@ -9,6 +9,7 @@ from folk.views import (
     displayLesson,
     displayPractice,
     deleteComment,
+    displayUseful,
 )
 
 from users.views import (
@@ -22,6 +23,7 @@ urlpatterns = [
     path('', displayHome, name='home'),
     path('lesson/<int:pk>', displayLesson, name='displayLesson'),
     path('practice/<int:pk>', displayPractice, name='displayPractice'),
+    path('useful/<int:pk>', displayUseful, name='displayUseful'),
     path('register', registerPage, name='register'),
     path('login', loginPage, name='login'),
     path('logout', logoutUser, name='logout'),

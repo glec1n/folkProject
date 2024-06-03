@@ -28,7 +28,7 @@ body{
     justify-content: center;
     align-items: center;
     /* flex-direction: column; */
-    background: url('https://ch-muzei.rh.muzkult.ru/media/2021/07/10/1300791938/DSC_0264_1.jpg') center no-repeat fixed;
+    background: url('../images/kartinka_dlya_zadnika1.jpg') center no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
@@ -60,7 +60,7 @@ body{
     height: 100%;
     width: 300px;
     padding: 15px;
-    background-color: rgb(247, 210, 117);
+    background-color: #217448;
     transition: var(--tran-05);
 }
 
@@ -86,7 +86,7 @@ body{
     justify-content: center;
     font-size: 20px;
     font-weight: 400;
-    color: #404040;
+    color: white;
 }
 
 .sidebar header .header-text .sub-title{
@@ -94,13 +94,13 @@ body{
     justify-content: center;
     font-size: 24px;
     font-weight: 400;
-    color: #404040;
+    color: white;
 }
 
 .sidebar header .header-text hr{
     margin: auto;
     max-width: 100%;
-    border: 1px dashed #404040;
+    border: 1px dashed white;
     margin: 8px 0 0 0;
 }
 
@@ -126,13 +126,13 @@ body{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #404040;
+    color: white;
     border-radius: 10px;
     transition: var(--tran-02);
 }
 
 .sidebar li a:hover{
-    background: rgb(207, 170, 70);
+    background: #56BA84;
 }
 
 .sidebar li a:hover .icon,
@@ -146,14 +146,21 @@ body{
     align-items: flex-end;
 }
 
+.sidebar .user{
+    margin: 20px 0 0 0;
+    padding: 0 0 0 10px;
+    font-size: 20px;
+    color: white;
+}
+
 .sidebar .bottom-link p{
     display: flex;
     font-size: 18px;
-    color: #404040;
+    color: white;
 }
 
 .sidebar .bottom-link .username{
-    color: black;
+    color: white;
 }
 
 .sidebar .bottom-link .icon{
@@ -162,7 +169,7 @@ body{
 
 .sidebar .bottom-link .text{
     font-size: 24px;
-    color: #313130;
+    color: white;
 }
 
 .sidebar .bottom-link li{
@@ -198,7 +205,7 @@ body{
 }
 
 .card-container{
-    height: 300px;
+    height: 230px;
     width: 200px;
     border-radius: 8px;
     background-color: white;
@@ -226,6 +233,14 @@ body{
     margin: 30px auto 0;
     width: 1160px;
 }
+
+.home-useful-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 0;
+    width: 1160px;
+}
+
 
 .category{
     font-size: 24px;
@@ -307,7 +322,7 @@ body{
     position: absolute;
     height: 100%;
     width: 50%;
-    background: rgb(247, 210, 117);
+    background: #217448;
     border-radius: inherit;
     cursor: grab;
 }
@@ -377,12 +392,12 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url('https://ch-muzei.rh.muzkult.ru/media/2021/07/10/1300791938/DSC_0264_1.jpg') center no-repeat fixed;
+    background: url('../images/kartinka_dlya_zadnika1.jpg') center no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
     color: white;
-    height: 180px;
+    height: 260px;
 }
 
 .lesson-container .lesson-content h3{
@@ -447,7 +462,7 @@ body{
 .login-form-box{
     display: flex;
     flex-direction: column;
-    background-color: rgb(247, 210, 117);
+    background-color: #217448;
     border-radius: 15px;
 }
 
@@ -461,15 +476,15 @@ body{
     justify-content: center;
     font-size: 30px;
     font-weight: 500;
-    color: #404040;
+    color: white;
     padding: 0 0 15px 0;
-    border-bottom: 2px dashed #404040;
+    border-bottom: 2px dashed white;
 }
 
 .login-form .form-input label{
     display: flex;
     font-size: 18px;
-    color: #404040;
+    color: white;
     margin: 0 0 5px 8px;
 }
 
@@ -485,7 +500,7 @@ body{
 
 .login-form .form-input input:hover{
     border-radius: 2px;
-    border: 2px solid #404040;
+    border: 2px solid white;
 }
 
 .login-form .form-submit{
@@ -501,14 +516,14 @@ body{
 
 .login-form .auth{
     margin: 10px 0 0 10px;
-    color: #404040;
+    color: white;
 }
 
 .login-form .auth a{
     text-decoration: none;
-    color: #404040;
+    color: white;
     cursor: pointer;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid white;
 }
 
 .login-form .auth a:hover{
@@ -532,7 +547,7 @@ body{
 .register-form-box{
     display: flex;
     flex-direction: column;
-    background-color: rgb(247, 210, 117);
+    background-color: #217448;
     border-radius: 15px;
 }
 
@@ -547,15 +562,15 @@ body{
     text-align: center;
     font-size: 30px;
     font-weight: 500;
-    color: #404040;
+    color: white;
     padding: 0 0 15px 0;
-    border-bottom: 2px dashed #404040;
+    border-bottom: 2px dashed white;
 }
 
 .register-form .form-input label{
     display: flex;
     font-size: 18px;
-    color: #404040;
+    color: white;
     margin: 0 0 5px 8px;
 }
 
@@ -571,7 +586,7 @@ body{
 
 .register-form .form-input input:hover{
     border-radius: 2px;
-    border: 2px solid #404040;
+    border: 2px solid white;
 }
 
 .register-form .form-submit{
@@ -587,14 +602,14 @@ body{
 
 .register-form .login{
     margin: 10px 0 0 10px;
-    color: #404040;
+    color: white;
 }
 
 .register-form .login a{
     text-decoration: none;
-    color: #404040;
+    color: white;
     cursor: pointer;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid white;
 }
 
 .register-form .login a:hover{
@@ -626,10 +641,17 @@ body{
 }
 
 .leave-comment {
-    margin: 20px 0 0 20px;
+    padding: 20px 0 0 20px;
 }
 
-.leave-comment input {
+.input-comment {
     width: 80%;
-    padding: 20px;
+    height: 50px;
+    padding: 10px;
+}
+
+.send-comment {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
 }

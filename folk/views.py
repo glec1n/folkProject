@@ -43,3 +43,11 @@ def deleteComment(request, pk):
         return redirect('home')
     
     return render(request, 'delete.html', {'obj': comment})
+
+def displayUseful(request, pk):
+    lessons = Lesson.objects.all()
+    useful = Useful.objects.get(id=pk)
+    images = Image.objects.all()
+
+    context = {'lessons': lessons, 'useful': useful, 'images': images}
+    return render(request, 'useful.html', context)

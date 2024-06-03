@@ -37,7 +37,11 @@
             </div>
 
             <div class="bottom-link">
-                <li class="user">Вы вошли как<p class="user-username">@{{request.user}}</li>
+                {% if request.user.is_authenticated %}
+                    <li class="user">Вы вошли как<p class="user-username">@{{request.user}}</li>
+                {% else %}
+                    <li class="user">Вы не авторизованы</li>
+                {% endif %}
                 <li>
                     {% if request.user.is_authenticated %}
                         <a href="{% url 'logout' %}">

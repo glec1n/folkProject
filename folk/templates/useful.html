@@ -7,17 +7,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Уроки</title>
+    <title>Упражнения</title>
 </head>
 <body>
     {% block content %}
 
     <div class="lesson-container">
         <div class="lesson-title-container">
-            <h1 class="lesson-title">Урок {{lesson.id}}. {{lesson.title}}</h1>
-            <span>{{lesson.category}}</span>
+            <h1 class="lesson-title">{{useful.title}}</h1>
+            <span>{{useful.category}}</span>
         </div>
-        <span class="lesson-content">{{lesson.text | safe }}</span>
+        <span class="lesson-content">{{useful.text | safe }}</span>
     </div>
 
     <hr class="lesson-comment">
@@ -32,9 +32,9 @@
                     <input class="send-comment" type="submit">
                 </form>
             </div>
-    
+
             {% endif %}
-    
+
         </div>
     
         <div class="container-comment">
@@ -42,15 +42,15 @@
             <h1>Комментарии:</h1>
     
             {% for comment in comments %}
-
-                <div>
-                    {% if request.user == comment.user %}
-                        <a href="{% url 'delete-comment' comment.id %}">Удалить</a>
-                    {% endif %}
-                    <small>@{{comment.user}} {{comment.created}}</small>
-                    <p>{{comment.body}}</p>
-                    <!-- <hr> -->
-                </div>
+            
+            <div>
+                {% if request.user == comment.user %}
+                    <a href="{% url 'delete-comment' comment.id %}">Удалить</a>
+                {% endif %}
+                <small>@{{comment.user}} {{comment.created}}</small>
+                <p>{{comment.body}}</p>
+                <!-- <hr> -->
+            </div>
 
             {% endfor %}
     

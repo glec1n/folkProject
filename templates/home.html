@@ -22,17 +22,17 @@
         <!-- <div class="home-cards"> -->
             <div class="home-category-container">
                 <div>
-                    <p class="category">Теоритическая часть</p>
-                    <p class="category-warning">Теоритические основы игры на чатхане</p>
+                    <p class="category">Теоретическая часть</p>
+                    <p class="category-warning">Теоретические основы игры на чатхане</p>
                 </div>
             </div>
 
             <div class="home-cards-container">
                 {% for lesson in lessons %}
-                    {% if lesson.category == 'Теоритическая часть' %}
+                    {% if lesson.category == 'Теоретическая часть' %}
                         <a href="{% url 'displayLesson' lesson.id %}"><div class="card-container">
                             <div class="card-content">
-                                <img src="static\images\hq720.jpg" alt="">
+                                <img src="{{lesson.image.url}}" alt="">
                                 <hr class="card-hr">
                                 <div class="card-title-container">
                                     <p class="card-title">{{lesson.title}}</p>
@@ -55,7 +55,7 @@
                     {% if lesson.category == 'Практическая часть' %}
                         <a href="{% url 'displayLesson' lesson.id %}"><div class="card-container">
                             <div class="card-content">
-                                <img src="static\images\hq720.jpg" alt="">
+                                <img src="{{lesson.image.url}}" alt="">
                                 <hr class="card-hr">
                                 <div class="card-title-container">
                                     <p class="card-title">{{lesson.title}}</p>
@@ -72,6 +72,28 @@
                         <div class="practice-content">
                             <div class="practice-title-container">
                                 <p class="practice-title">{{practice.title}}</p>
+                            </div>
+                        </div>
+                    </div></a>
+                {% endfor %}
+            </div>
+
+            <hr class="category-hr">
+
+            <div class="home-useful-container">
+                <div>
+                    <p class="category">Полезно</p>
+                </div>
+            </div>
+
+            <div class="home-cards-container">
+                {% for useful in usefuls %}
+                    <a href="{% url 'displayUseful' useful.id %}"><div class="card-container">
+                        <div class="card-content">
+                            <img src="{{useful.image.url}}" alt="">
+                            <hr class="card-hr">
+                            <div class="card-title-container">
+                                <p class="card-title">{{useful.title}}</p>
                             </div>
                         </div>
                     </div></a>
